@@ -7,10 +7,8 @@ const PORT=5100;
 app.get('/',(req,res)=>{
     res.sendFile(__dirname+'/index.html')
 })
-app.get('/bmic',(req,res)=>{
-    res.sendFile(__dirname,"/bmic.html")
-})
-app.post('/bmic',(req,res)=>{
+
+app.post('/',(req,res)=>{
     h=parseFloat(req.body.Height)
     w=parseFloat(req.body.Weight)
 
