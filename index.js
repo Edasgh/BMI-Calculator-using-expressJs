@@ -25,5 +25,5 @@ app.post('/bmic',(req,res)=>{
     
 })
 app.listen(PORT,()=>{
- console.log(`BMI_Calculator app listening at  http://localhost:${PORT}`);
+ console.log(`BMI_Calculator app listening at port ${PORT}`);
 })
