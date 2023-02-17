@@ -2,10 +2,13 @@ const express=require('express');
 const bodyParser=require('body-parser');
 const app = express();
 app.use(bodyParser.urlencoded({extended:true}))
-const PORT=5000;
+const PORT=5100;
 
 app.get('/',(req,res)=>{
     res.sendFile(__dirname+'/index.html')
+})
+app.get('/bmic',(req,res)=>{
+    res.sendFile(__dirname,"/bmic.html")
 })
 app.post('/bmic',(req,res)=>{
     h=parseFloat(req.body.Height)
